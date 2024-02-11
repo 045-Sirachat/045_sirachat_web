@@ -4,8 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>ก๋วยเตี๋ยวเรือเส้นเล็ก</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa; /* เปลี่ยนสีพื้นหลัง */
+    }
+
+    header, nav, section, footer {
+        margin: 20px;
+        background-color: #ffffff; /* เปลี่ยนสีพื้นหลังของ header, nav, section, footer */
+        border-radius: 10px; /* เพิ่มขอบมน */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+        padding: 20px; /* เพิ่มระยะห่างของเนื้อหาภายใน */
+    }
+
+    header {
+        text-align: center;
+    }
+
+    nav {
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px; /* เพิ่มขอบมน */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    section {
+        margin-top: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px; /* เพิ่มขอบมน */
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px; /* เพิ่มขอบมน */
+        border: 1px solid #ccc;
+        resize: none; /* ปิดการเปลี่ยนขนาด textarea */
+    }
+
+    textarea:focus {
+        outline: none; /* ปิดเส้นขอบ focus */
+        border-color: #333; /* เปลี่ยนสีเส้นขอบเมื่อ focus */
+    }
+</style>
 </head>
 <body>
     <header>
@@ -21,7 +99,7 @@
     </nav>
 
     <section id="food-image">
-        <img src="images/photo.jpg" alt="ก๋วยเตี๋ยวเส้นใหญ่" width="550 px"/>
+        <img src="image/photo.jpg" alt="ก๋วยเตี๋ยวเส้นใหญ่" width="550 px"/>
     </section>
 
     <section id="ingredients">

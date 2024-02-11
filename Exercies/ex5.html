@@ -15,7 +15,7 @@
           // Check username length
           if (username.length < 8) {
             document.querySelector("#errorUsername").innerHTML =
-              "Username must be at least 8 characters long";
+              "กรุณาป้อนชื่อผู้ใช้งานอย่างน้อย 8 ตัวอักษร";
           } else {
             checkusername = true;
             document.querySelector("#errorUsername").innerHTML = "";
@@ -24,7 +24,7 @@
           // Check password length
           if (password.length < 8) {
             document.querySelector("#errorPassword").innerHTML =
-              "Password must be at least 8 characters long";
+              "กรุณาป้อนรหัสผ่านอย่างน้อย 8 ตัวอักษร";
           } else {
             checkpassword = true;
             document.querySelector("#errorPassword").innerHTML = "";
@@ -46,19 +46,81 @@
         color: red;
       }
       body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 300px;
-       
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-}
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .error {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
     </style>
   </head>
   <body>
     <div class="body">
-    <h1>Hello</h1>
+    <h1>Log In</h1>
     <button id="clickme">Click Me</button>
     <form action="">
       <p>Username :</p>
