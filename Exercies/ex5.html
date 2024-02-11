@@ -12,7 +12,7 @@
           let checkusername = false;
           let checkpassword = false;
 
-          
+          // Check username length
           if (username.length < 8) {
             document.querySelector("#errorUsername").innerHTML =
               "Username must be at least 8 characters long";
@@ -21,7 +21,7 @@
             document.querySelector("#errorUsername").innerHTML = "";
           }
 
-          
+          // Check password length
           if (password.length < 8) {
             document.querySelector("#errorPassword").innerHTML =
               "Password must be at least 8 characters long";
@@ -30,9 +30,9 @@
             document.querySelector("#errorPassword").innerHTML = "";
           }
 
-    
+          // Prevent form submission if validation fails
           if (!(checkusername && checkpassword)) {
-            event.preventDefault(); 
+            event.preventDefault(); // Prevent form submission
           }
         };
 
@@ -45,20 +45,28 @@
       .error {
         color: red;
       }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+  
+}
     </style>
   </head>
   <body>
-    <h1>Hello</h1>
+    <div class="body"><h1>Hello</h1>
     <button id="clickme">Click Me</button>
-
     <form action="">
       <p>Username :</p>
       <input type="text" id="username" />
       <p id="errorUsername" class="error"></p>
       <p>Password :</p>
       <input type="password" id="password" />
-      <p id="errorPassword" class="error"></p> 
+      <p id="errorPassword" class="error"></p> <!-- Fixed duplicate ID -->
       <input type="submit" value="OK" />
     </form>
+</div>
   </body>
 </html>
