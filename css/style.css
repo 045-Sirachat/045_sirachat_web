@@ -7,11 +7,11 @@ body {
   /* font-family: "Oswald", sans-serif; */
 }
 .navbar-brand {
-  color: #6b7b81;
+  color: #000000;
 }
  
 .bg-body-tertiary {
-  background-color: white !important;
+  background-color: rgba(202, 202, 202, 0.205) !important;
 }
 .myBtn {
   color: white;
