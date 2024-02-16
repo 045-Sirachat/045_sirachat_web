@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("form").onsubmit = function (event) {
+          let username = document.querySelector("#username").value;
+          let password = document.querySelector("#password").value;
+          let checkusername = false;
+          let checkpassword = false;
+
+          // Check username length
+          if (username.length < 8) {
+            document.querySelector("#errorUsername").innerHTML =
+              "Username must be at least 8 characters long";
+          } else {
+            checkusername = true;
+            document.querySelector("#errorUsername").innerHTML = "";
+          }
+
+          // Check password length
+          if (password.length < 8) {
+            document.querySelector("#errorPassword").innerHTML =
+              "Password must be at least 8 characters long";
+          } else {
+            checkpassword = true;
+            document.querySelector("#errorPassword").innerHTML = "";
+          }
+
+          // Prevent form submission if validation fails
+          if (!(checkusername && checkpassword)) {
+            event.preventDefault(); // Prevent form submission
+          }
+        };
+
+        document.querySelector("#clickme").onclick = function () {
+          document.querySelector("h1").innerHTML = "Good Bye";
+        };
+      });
+    </script>
+    <style>
+      .error {
+        color: red;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 300px;
+       
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="body">
+    <h1>Hello</h1>
+    <button id="clickme">Click Me</button>
+    <form action="">
+      <p>Username :</p>
+      <input type="text" id="username" />
+      <p id="errorUsername" class="error"></p>
+      <p>Password :</p>
+      <input type="password" id="password" />
+      <p id="errorPassword" class="error"></p> <!-- Fixed duplicate ID -->
+      <input type="submit" value="OK" />
+    </form>
+</div>
+  </body>
+</html>
